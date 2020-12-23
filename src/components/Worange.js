@@ -9,9 +9,9 @@ function Worange({ children }) {
         h={10}
         w={10}
         position="absolute"
-        zIndex="1"
+        zIndex="21"
       />
-      <Box zIndex="2" position="relative" ml={3}>
+      <Box zIndex="22" position="relative" ml={3}>
         {children}
       </Box>
     </Flex>

@@ -1,0 +1,27 @@
+.menuContainer {
+  transition: background 0.3s;
+  box-sizing: border-box;
+}
+
+.menuContainer:hover {
+  background: transparent;
+  border: 1px solid #707070;
+}
+
+.circle {
+  transition: all 1s;
+}
+.menuContainer:hover .circle:first-child {
+  background: #f3ac1e;
+  transition: all 1s;
+}
+
+.shrinkedMenu {
+  width: 0;
+  overflow: hidden;
+}
+
+.menuContainer:hover .shrinkedMenu {
+  width: 325px;
+  transition: width 0.5s;
+}
