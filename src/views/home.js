@@ -1,6 +1,47 @@
-import { Flex, Image, Center, Text, Box } from "@chakra-ui/react";
+import {
+  Flex,
+  Image,
+  Center,
+  Text,
+  Box,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
 import Worange from "../components/Worange";
 import styles from "./home.module.css";
+
+const serviceItem = [
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+];
 
 function Home() {
   return (
@@ -123,17 +164,45 @@ function Home() {
         background="brand.orange"
         p={4}
         px={40}
-        direction="column"
+        direction="row"
         h="100vh"
-        justifyContent="center"
+        alignItems="center"
       >
-        <Box width="40vw" textAlign="center">
+        <Box width="50vw" textAlign="center">
           <Text fontSize="100px" color="white" fontWeight="bold">
             "Apa lu mau, gua ada"
           </Text>
           <Text fontSize="24px" mt={4} fontWeight="bold">
             *asal yang kami bisa*
           </Text>
+        </Box>
+        <Box width="50vw">
+          <Grid templateRows="repeat(2, 1fr)" templateColumns="repeat(3, 1fr)">
+            {serviceItem.map((cont) => (
+              <GridItem
+                h="fit-content"
+                background="white"
+                margin={2}
+                p={6}
+                boxShadow="0 0 3px 1px #4b4b4b33"
+                borderRadius={4}
+                textAlign="center"
+              >
+                <Image
+                  src="/assets/logo_text.png"
+                  height={24}
+                  objectFit="contain"
+                  margin="0 auto"
+                />
+                <Text fontWeight="bold" color="brand.orange">
+                  {cont.title}
+                </Text>
+                <Text fontSize="xs" color="#7a7a7a" mt={2} fontWeight={400}>
+                  {cont.content}
+                </Text>
+              </GridItem>
+            ))}
+          </Grid>
         </Box>
       </Flex>
     </>
