@@ -43,6 +43,54 @@ const serviceItem = [
   },
 ];
 
+const portofolio = [
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+  {
+    title: "Lorem ipsum",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+  },
+];
+
 function Home() {
   return (
     <>
@@ -204,6 +252,57 @@ function Home() {
             ))}
           </Grid>
         </Box>
+      </Flex>
+      <Flex
+        p={44}
+        py={44}
+        direction="column"
+        h="100vh"
+        position="relative"
+        style={{
+          background: `linear-gradient(117deg, #2E2E2E, #515151)`,
+        }}
+      >
+        <Text
+          color="brand.orange"
+          fontSize="48px"
+          fontWeight="bold"
+          alignSelf="flex-end"
+        >
+          Our Craft
+        </Text>
+        <Grid
+          mt={6}
+          templateRows="repeat(2, 1fr)"
+          templateColumns="repeat(5, 1fr)"
+          gridAutoRows="1fr"
+        >
+          {portofolio.map(() => (
+            <GridItem background="#FFF" mr={6} mb={6} borderRadius={4}>
+              <Image
+                src="/assets/logo_text.png"
+                margin="0 auto"
+                objectFit="cover"
+                height="250px"
+                objectPosition="center"
+              />
+            </GridItem>
+          ))}
+          <GridItem
+            background="brand.orange"
+            color="#FFF"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            mr={6}
+            mb={6}
+            borderRadius={4}
+          >
+            <Text fontSize="40px" fontWeight="bold">
+              NEXT
+            </Text>
+          </GridItem>
+        </Grid>
       </Flex>
     </>
   );
